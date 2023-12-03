@@ -23,6 +23,8 @@ public class ProjectSecurityConfig {
 
                     .dispatcherTypeMatchers(FORWARD, ERROR).permitAll()
                     .requestMatchers("/contact/**", "/notice", "/about").permitAll()
+                    .requestMatchers("/api/**").authenticated()
+                    .requestMatchers("/card/**").hasRole("USER")
                     .requestMatchers("/loan/**","/card/**","/account ").hasRole("ADMIN")
                     .requestMatchers("/db/**").access(allOf(hasAuthority("db"), hasRole("ADMIN")))
                     .anyRequest().denyAll()
