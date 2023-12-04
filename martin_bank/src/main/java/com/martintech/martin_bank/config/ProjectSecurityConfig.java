@@ -15,7 +15,7 @@ import static org.springframework.security.authorization.AuthorityAuthorizationM
 @Configuration
 public class ProjectSecurityConfig {
 
-
+/*
     @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
         http
@@ -33,5 +33,5 @@ public class ProjectSecurityConfig {
         );
         return http.build();
     }
-
+*/
 }
